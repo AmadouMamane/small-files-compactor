@@ -17,11 +17,11 @@ import scala.util.{Failure, Random, Success, Try}
  *
  * ==Overview==
  * This includes
- *  - A method to write data into hive tables by producing the exact number of files expected (data volume divided by HDFS block size)
- *  - A faster method to write data into hive tables but it produces the approximate number of files expected
- *  - A method to write into HDFS directory by producing the exact number of files expected
+ *  - A method for writing data into hive tables by producing the exact number of files expected (data volume divided by HDFS block size)
+ *  - A faster method for writing data into hive tables but it produces the approximate number of files expected
+ *  - A method for writing into HDFS directory by producing the exact number of files expected
  *
- *  This methods work also for a partitioned table
+ *  Note that this methods support partitioned tables
  */
 object Compactor {
 
