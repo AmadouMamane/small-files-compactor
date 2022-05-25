@@ -1,0 +1,68 @@
+# Spark Big Query Utils
+:page-layout: base
+:source-language: scala
+:icons: font
+:linkattrs:
+:sectanchors:
+:sectlink:
+:numbered:
+:doctype: book
+:toc: preamble
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+ :revnumber: v1.1
+ :revdate: 15.03.2022
+ :revremark: initial release
+ :author: Amadou Mamane
+ :email: mamanesarki@yahoo.fr
+
+## Project documentation
+
+
+### Project description
+
+Small files compactor helps resolving the recurring problem of small files on Hadoop clusters.
+
+### Packages descriptions
+
+Here is a brief description for each package and object of the source code
+====
+include::./src/main/scala/com/mydevs/database/database.scala[lines=1..14]
+====
+[source,scala]
+----
+/**
+  * Provides database or data related classes to handle data in/out.
+  *
+  * ==Overview==
+  * This package contains common classes to handle some common functions
+  * such as read/write data from/to Hive, Cassandra or external RDBMS.
+  * This package handle also any sqoop related functions (import/export).
+  */
+package object database
+----
+
+
+====
+include::./src/main/scala/com/mydevs/database/Compactor.scala[lines=1..10]
+[source,scala]
+----
+/**
+ * API for writing data into Hadoop according to HDFS block size
+ *
+ * ==Overview==
+ * This includes
+ *  - A method to write data into hive tables by producing the exact number of files expected (data volume divided by HDFS block size)
+ *  - A faster method to write data into hive tables but it produces the approximate number of files expected
+ *  - A method to write into HDFS directory by producing the exact number of files expected
+ *
+ *  This methods work also for a partitioned table
+ */
+object Compactor
+----
+====
+
