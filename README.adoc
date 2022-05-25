@@ -1,4 +1,4 @@
-# Spark Big Query Utils
+# Small Files Compactor
 :page-layout: base
 :source-language: scala
 :icons: font
